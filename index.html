@@ -9,88 +9,89 @@
 </head>
 <body>
     <main>
-
+        <input type="text" id="result">
         <button class="special" onclick="
-            calculation =' '
-            console.log(calculation)
-        ">AC</button>
+            document.getElementById('result').
+                value = ' ';">AC
+        </button>
         <button class="special" onclick="
-            calculation +='0'
-            console.log(calculation)
-        ">0</button>
+            deleteLastCharacter()">DE
+        </button>
         <button class="special" onclick="
-            calculation +='%'
-            console.log(calculation)
-        ">%</button>
+            document.getElementById('result').
+                value += encodeURIComponent('%');">%
+        </button>
         <button class="operators" onclick="
-            calculation +='/'
-            console.log(calculation)
-        ">/</button>
+            document.getElementById('result').
+                value += '/';">/
+        </button>
         <button onclick="
-            calculation +='7'
-            console.log(calculation)
-        ">7</button>
+            document.getElementById('result').
+                value += '7';">7
+        </button>
         <button onclick="
-            calculation +='8'
-            console.log(calculation)
-        ">8</button>
+            document.getElementById('result').
+                value += '8';">8
+        </button>
         <button onclick="
-            calculation +='9'
-            console.log(calculation)
-        ">9</button>
+            document.getElementById('result').
+                value += '9';">9
+        </button>
         <button class="operators" onclick="
-            calculation +='*'
-            console.log(calculation)
-        ">x</button>
+            document.getElementById('result').
+                value += '*';">x
+        </button>
         <button onclick="
-            calculation +='4'
-            console.log(calculation)
-        ">4</button>
+            document.getElementById('result').
+                value += '4';">4
+        </button>
         <button onclick="
-            calculation +='5'
-            console.log(calculation)
-        ">5</button>
+            document.getElementById('result').
+                value += '5';">5
+        </button>
         <button onclick="
-            calculation +='6'
-            console.log(calculation)
-        ">6</button>
+            document.getElementById('result').
+                value += '6';">6
+        </button>
         <button class="operators" onclick="
-            calculation +='-'
-            console.log(calculation)
-        ">-</button>
+            document.getElementById('result').
+                value += '-';">-
+        </button>
         <button onclick="
-            calculation +='1'
-            console.log(calculation)
-        ">1</button>
+            document.getElementById('result').
+                value += '1';">1
+        </button>
         <button onclick="
-            calculation +='2'
-            console.log(calculation)
-        ">2</button>
+            document.getElementById('result').
+                value += '2';">2
+        </button>
         <button onclick="
-            calculation +='3'
-            console.log(calculation)
-        ">3</button>
+            document.getElementById('result').
+                value += '3';">3
+        </button>
         <button class="operators" onclick="
-            calculation +='+'
-            console.log(calculation)
-        ">+</button>
+            document.getElementById('result').
+                value += '+';">+
+        </button>
         <button class="zero" onclick="
-            calculation +='0'
-            console.log(calculation)
-        ">0</button>
+            document.getElementById('result').
+                value += '0';">0
+        </button>
         <button onclick="
-            calculation +='.'
-            console.log(calculation)
-        ">.</button>
+            document.getElementById('result').
+                value += '.';">.
+        </button>
         <button class="operators" onclick="
-            calculation = eval(calculation);
-            console.log(calculation)
-        ">=</button>
-    </main>
-    
+            document.getElementById('result').
+                value = eval(document.getElementById('result').value);">=
+        </button>
+    </main>    
 
     <script>
-        let calculation = ''
+        function deleteLastCharacter() {
+            var result = document.getElementById('result');
+            result.value = result.value.slice(0, -1);
+        }
     </script>
 </body>
 </html>

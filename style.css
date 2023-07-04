@@ -8,6 +8,19 @@ main{
     padding-block: 2rem;
     padding-inline: 1rem;
     border-radius: 50px;
+    margin-block-start: 4rem;
+    border: 5px double grey;
+}
+
+main input#result {
+    grid-column: span 4;
+    height: 80px;
+    background: #000;
+    color: white;
+    font-size: 3rem;
+    border: 2px solid rgb(46, 43, 43);
+    border-radius: 10px;
+    text-align: right;
 }
 
 button {
@@ -32,8 +45,4 @@ button.operators {
 
 button.special {
     background-color: hsl(210, 6%, 65%);
-}
-
-body {
-    background-color: black;
 }
