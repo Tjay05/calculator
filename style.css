@@ -1,0 +1,39 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 320px;
+    margin-inline: auto;
+    background-color: black;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    border-radius: 50px;
+}
+
+button {
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    width: 60px;
+    height: 60px;
+    background-color: hsla(0, 2%, 35%, 0.767);
+}
+
+button.zero {
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 50px;
+}
+
+button.operators {
+    background-color: rgba(255, 217, 0, 0.842);
+}
+
+button.special {
+    background-color: hsl(210, 6%, 65%);
+}
+
+body {
+    background-color: black;
+}
